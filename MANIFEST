@@ -4,4 +4,3 @@ MANIFEST
 README
 t/Tk-Airports.t
 lib/Tk/Airports.pm
-META.yml                                 Module meta-data (added by MakeMaker)

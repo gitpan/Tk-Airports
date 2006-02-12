@@ -1,6 +1,9 @@
 Revision history for Perl extension Tk::Airports.
 
-0.01  Sun Jul 17 10:48:35 2005
+0.01  Fri Feb 10 12:22:38 2006
 	- original version; created by h2xs 1.23 with options
-		-XA -b 5.6.1 -n Tk::Airports
+		-b 5.8.4 -XA -n Tk::Airports
+        
+0.02  Fri Feb 10 12:40:32 2006
+    - option -filename added
 

@@ -14,7 +14,7 @@ require Tk::Toplevel;
 require Tk::HList;
 
 our @ISA = qw(Tk::Derived Tk::Toplevel);
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 Construct Tk::Widget 'Airports';
 
@@ -56,6 +56,7 @@ sub Populate{
             -selectmode => ['PASSIVE', 'selectmode', 'Selectmode', 'single'   ],
             -order      => ['PASSIVE', 'order'     , 'Order'     , 'code'     ],
             -font       => ['PASSIVE', 'font'      , 'Font'      , 'Courier 8'],
+            -filename   => ['PASSIVE', 'filename'  , 'Filename'  , ''         ],
                   );
   $cw->protocol('WM_DELETE_WINDOW' => ['Cancel', $cw]);
   
@@ -89,10 +90,31 @@ sub Populate{
                          -font            => 'Courier 8',
                          ); 
   # insert airports
-  my @list = _getAirports();
+  my @list  = ();
+  my $error = 0;
+  if(exists $args->{-filename}){
+    unless(open(my $fh,"<",$args->{-filename})){
+      $error = 1;
+    }
+    else{
+      my @lines = <$fh>;
+      if($lines[0] =~ /^[A-Z]{3} - .*$/){
+        @list = @lines;
+      }
+      else{
+        $error = 1;
+      }
+      close $fh;
+    }
+  }
+  if(!exists $args->{-filename} || $error){
+    _getAirports();
+  }
+  
   if(exists $args->{-order} && $args->{-order} eq 'city'){
     @list = sort{substr($a,6) cmp substr($b,6)}@list;
   }
+  
   for(0..(scalar(@list)-1)){
     $hl->insert('end',$list[$_]);
   }
@@ -2291,6 +2313,14 @@ Specifies the title of the widget.
 It is possible to change the order. The list can be ordered by
 Airport-Code (B<code>) or by City-Name (B<city>). The default 
 value is B<code>.
+
+=item Name:	B<filename>
+
+=item Class:	B<Filename>
+
+=item Switch:	B<-filename>
+
+Specifies a file that contains a user specific set of Airports
 
 =back
 
