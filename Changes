@@ -7,3 +7,7 @@ Revision history for Perl extension Tk::Airports.
 0.02  Fri Feb 10 12:40:32 2006
     - option -filename added
 
+0.04  Mon Oct 02 11:07:14 2006 Renee Baecker <module@renee-baecker.de>
+      * added pseudo documentation for some methods
+      * added tests: Pod, Pod_Coverage, Manifest
+

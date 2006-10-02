@@ -14,7 +14,7 @@ require Tk::Toplevel;
 require Tk::HList;
 
 our @ISA = qw(Tk::Derived Tk::Toplevel);
-our $VERSION = '0.02';
+our $VERSION = '0.04';
 
 Construct Tk::Widget 'Airports';
 
@@ -2345,8 +2345,6 @@ modify the options described above.
 The widget also inherits all the methods provided by the generic
 L<Tk::Widget|Tk::Widget> class.
 
-=back
-
 =head1 DEFAULT BINDINGS
 
 The following additional behavior is defined by the default bindings:
@@ -2379,6 +2377,22 @@ Please contact me when you have found a bug.
 *) allow other fonts
 *) option for specifying the return values (code,city,all)
 *) option for specifying the delimiter
+
+document these methods:
+
+=over 4
+
+=item Accept
+
+=item Cancel
+
+=item Populate
+
+=item Search
+
+=item Show
+
+=back
 
 =head1 AUTHOR
 
