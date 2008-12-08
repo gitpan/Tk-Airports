@@ -11,3 +11,6 @@ Revision history for Perl extension Tk::Airports.
       * added pseudo documentation for some methods
       * added tests: Pod, Pod_Coverage, Manifest
 
+0.05 Mon Dec 08 2008
+      * just a new version due to #41433
+      * changed pod and pod_coverage tests due to the test fails

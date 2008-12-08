@@ -12,5 +12,7 @@ WriteMakefile(
                          }, # e.g., Module::Name => 1.1
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'lib/Tk/Airports.pm', # retrieve abstract from module
-       AUTHOR         => 'U-PERLCOMP\Renee <Renee@familiehaase.de>') : ()),
+       AUTHOR         => 'Renee <module@renee-baecker.de>') : ()),
+    ($ExtUtils::MakeMaker::VERSION >= 6.31 ?
+      (LICENSE        => 'perl') : ()),
 );

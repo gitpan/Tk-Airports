@@ -1,10 +1,7 @@
-use Test::More;
+#!perl -T
 
-SKIP:{
-    eval "use Test::Pod::Coverage";
-    skip "Test::Pod::Coverage required",1 if $@;
-    plan tests => 1;
-    pod_coverage_ok("Tk::Airports");
-}
-
+use Test::More tests => 1;
+eval "use Test::Pod::Coverage 1.04";
+plan skip_all => "Test::Pod::Coverage 1.04 required for testing POD coverage" if $@;
+pod_coverage_ok( 'Tk::Airports' );
 

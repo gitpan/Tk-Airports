@@ -1,11 +1,6 @@
+#!perl -T
+
 use Test::More;
-use FindBin ();
-
-SKIP:{
-    eval "use Test::Pod 1.00";
-    skip "Test::Pod 1.00 required",1 if $@;
-    my $path_to_pods = $FindBin::Bin . '/../blib/lib/Tk/';
-    my @poddirs = ($path_to_pods);
-    all_pod_files_ok(all_pod_files(@poddirs));
-}
-
+eval "use Test::Pod 1.14";
+plan skip_all => "Test::Pod 1.14 required for testing POD" if $@;
+all_pod_files_ok();
