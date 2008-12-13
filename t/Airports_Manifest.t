@@ -1,7 +1,10 @@
-use Test::More tests => 1;
+#!/usr/bin/perl
 
-SKIP:{
-    eval "use Test::CheckManifest";
-    skip 'Test::CheckManifest is required',1 if $@;
-    ok_manifest();
-}
+use strict;
+use warnings;
+use FindBin ();
+use Test::More;
+
+eval "use Test::CheckManifest 1.01";
+plan skip_all => "Test::CheckManifest 1.01 required" if $@;
+ok_manifest({filter => [qr/\.svn/]});

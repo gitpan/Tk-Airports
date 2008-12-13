@@ -14,7 +14,7 @@ require Tk::Toplevel;
 require Tk::HList;
 
 our @ISA = qw(Tk::Derived Tk::Toplevel);
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 Construct Tk::Widget 'Airports';
 
@@ -2400,7 +2400,7 @@ Renee Baecker, E<lt>module@renee-baecker.deE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2005 by Renee Baecker
+Copyright (C) 2006 - 2008 by Renee Baecker
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.6.1 or,
