@@ -1,5 +1,8 @@
 Revision history for Perl extension Tk::Airports.
 
+0.061 Sat Dec 13 2008
+      * bugfix in META.yml
+
 0.06  Tue Dec 09 2008
       * updated manifest test
       * added Test::More to dependencies

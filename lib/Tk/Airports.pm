@@ -14,7 +14,7 @@ require Tk::Toplevel;
 require Tk::HList;
 
 our @ISA = qw(Tk::Derived Tk::Toplevel);
-our $VERSION = '0.06';
+our $VERSION = '0.061';
 
 Construct Tk::Widget 'Airports';
 
