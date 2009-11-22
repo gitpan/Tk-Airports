@@ -15,5 +15,5 @@ WriteMakefile(
       (ABSTRACT_FROM  => 'lib/Tk/Airports.pm', # retrieve abstract from module
        AUTHOR         => 'Renee <module@renee-baecker.de>') : ()),
     ($ExtUtils::MakeMaker::VERSION >= 6.31 ?
-      (LICENSE        => 'perl') : ()),
+      (LICENSE        => 'artistic_2') : ()),
 );

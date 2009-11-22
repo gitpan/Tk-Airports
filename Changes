@@ -1,5 +1,9 @@
 Revision history for Perl extension Tk::Airports.
 
+0.062 Sun Nov 22 2009
+      * bugfix in pod coverage test
+      * switched to Artistic License 2.0
+
 0.061 Sat Dec 13 2008
       * bugfix in META.yml
 
